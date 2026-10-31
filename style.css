@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef3f8;
+  margin: 0;
+  padding: 20px;
+  color: #1f2933;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0;
+  color: #0b5ed7;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+h2 {
+  margin-top: 30px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.check {
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+.check input {
+  margin-right: 8px;
+}
+
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: #0b5ed7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #084298;
+}
+
+#result {
+  margin-top: 25px;
+}
+
+.box {
+  padding: 14px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border-left: 6px solid #6b7280;
+  background: #f3f4f6;
+}
+
+.green {
+  border-left-color: #16a34a;
+  background: #dcfce7;
+}
+
+.amber {
+  border-left-color: #f59e0b;
+  background: #fef3c7;
+}
+
+.red {
+  border-left-color: #dc2626;
+  background: #fee2e2;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f3f4f6;
+}
+
+.rowred {
+  background: #fee2e2;
+}
+
+.rowamber {
+  background: #fef3c7;
+}
+
+.rowgreen {
+  background: #dcfce7;
+}
+
+button.small {
+  margin: 0;
+  width: auto;
+  padding: 6px 10px;
+  font-size: 13px;
+  background: #dc2626;
+}
+
+button.small:hover {
+  background: #991b1b;
+}
+
+#saveMsg {
+  color: #16a34a;
+  font-weight: bold;
+}

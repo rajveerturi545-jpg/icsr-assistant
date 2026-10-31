@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICSR Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ICSR Assistant</h1>
+    <p class="subtitle">Case validity, seriousness, causality, deadline and narrative (demo with fictional data)</p>
+
+    <h2>1. Case details</h2>
+    <label>Patient (initials)</label>
+    <input type="text" id="patient" placeholder="e.g. A.K.">
+
+    <label>Patient age (years)</label>
+    <input type="number" id="age">
+
+    <label>Patient sex</label>
+    <select id="sex">
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+
+    <label>Reporter (name / qualification)</label>
+    <input type="text" id="reporter" placeholder="e.g. Dr. Sharma, physician">
+
+    <label>Suspect drug</label>
+    <input type="text" id="drug" placeholder="e.g. paracetamol">
+
+    <label>Dose</label>
+    <input type="text" id="dose" placeholder="e.g. 500 mg twice daily">
+
+    <label>Adverse event (verbatim)</label>
+    <input type="text" id="event" placeholder="e.g. rash">
+
+    <label>Event onset date</label>
+    <input type="date" id="onsetDate">
+
+    <label>Date of receipt (Day 0)</label>
+    <input type="date" id="receiptDate">
+
+    <label>Outcome</label>
+    <select id="outcome">
+      <option value="recovered">Recovered</option>
+      <option value="recovering">Recovering</option>
+      <option value="not recovered">Not recovered</option>
+      <option value="fatal">Fatal</option>
+      <option value="unknown">Unknown</option>
+    </select>
+
+    <h2>2. Seriousness criteria</h2>
+    <label class="check"><input type="checkbox" id="death"> Death</label>
+    <label class="check"><input type="checkbox" id="lifethreat"> Life-threatening</label>
+    <label class="check"><input type="checkbox" id="hosp"> Hospitalization</label>
+    <label class="check"><input type="checkbox" id="disability"> Persistent disability</label>
+    <label class="check"><input type="checkbox" id="congenital"> Congenital anomaly</label>
+    <label class="check"><input type="checkbox" id="medimp"> Other medically important</label>
+
+    <h2>3. Causality assessment (WHO-UMC)</h2>
+    <label>Is the time between taking the drug and the event reasonable?</label>
+    <select id="timeRel">
+      <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label>Could the disease or other drugs explain the event?</label>
+    <select id="otherCauses">
+      <option value="">Select</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label>Did the event improve after stopping the drug (dechallenge)?</label>
+    <select id="dechallenge">
+      <option value="notdone">Not done / unknown</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label>Did the event come back after restarting the drug (rechallenge)?</label>
+    <select id="rechallenge">
+      <option value="notdone">Not done / unknown</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <button type="button" onclick="processCase()">Process case</button>
+
+    <div id="result"></div>
+
+    <button type="button" onclick="saveCase()">Save case to tracker</button>
+    <p id="saveMsg"></p>
+
+    <h2>Case tracker</h2>
+    <div id="tracker"></div>
+  </div>
+
+    <script src="drugs.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
